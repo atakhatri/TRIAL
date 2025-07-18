@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Music Playlist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>HEY THERE</h1>
+    <h3>Just to share some songs😶‍🌫️</h3>
+    <h3>And some note idk, Ignore if possible</h3>
+  </header>
+
+  <div class="main">
+    <div class="spotify">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7tHWJVSO55PFAHMjRqGpIx?utm_source=generator&theme=0" width="100%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    <div class="content">
+      <P>GOOD MORNING !</P>
+      <P>GOOOD AFTERNOON !!</P>
+      <P>GOOOOD EVENING !!!</P>
+      <p>hope you're doing greeattt :)</p>
+    </div>
+  </div>
+
+  <div class="name-checker">
+    <h2>enter your name</h2>
+    <p>see,but don't get angry plzzzzzzzzzzz</p>
+    <p>try 'anu' or 'anugraha'</p>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <br>
+    <button onclick="checkName()">Check Score</button>
+    <div class="result" id="resultBox"></div>
+  </div>
+
+  <footer>
+    IK i shouldn't but can't help it 😭😭
+  </footer>
+</body>
+
+<script>
+  function checkName() {
+  const name = document.getElementById("nameInput").value.trim().toLowerCase();
+  const resultBox = document.getElementById("resultBox");
+
+  if (name.length === 0) {
+    resultBox.textContent = "Please enter a valid name!";
+  } else if (name === "anu" || name === "anugraha") {
+    resultBox.textContent = `Ohhh IG the score is out of limits, out of capacity... 9999/10!!! 🚀💥`;
+  } else {
+    resultBox.textContent = `${capitalize(name)}, not you mate !!! :(`;
+  }
+  resultBox.classList.add("show");
+
+  }
+  function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+</script>
+</html>
